@@ -10,12 +10,20 @@ Característica: Funcionalidad de login
     Y ingreso el correo electrónico "<email>"
     * ingreso la contraseña "<pass>"
     * hago clic en el botón de inicio de sesión
-    Entonces se espera que el usuario inicie sesión con éxito
+    #Entonces se espera que el usuario inicie sesión con éxito
 
     Ejemplos:
+
       | email                          | pass             |
+      #empresario
+      #|mpocomuchagmailcom@yopmail.com | *9gGcn7103TrmHW0 |
       | mpocomuchagmailcom@yopmail.com | *9gGcn7103TrmHW0 |
-#      | mpocomuchagmailcom@yopmail.com | *9gGcn7103TrmHW0 |
+        #persona juridica
+#     |gestoraprestamypecom@yopmail.com | *9gGcn7103TrmHW0 |
+       #persona ce
+#      |laure.schlesingergmailcom@yopmail.com | *9gGcn7103TrmHW0 |
+      #persona natural
+#     | anteromelgaryahooes@yopmail.com| *9gGcn7103TrmHW0 |
 #      | testprbtest40@yopmail.com      | 781783cerhC      |
 #      | test02cambiocorreo@yopmail.com | 781783cerhC      |
 #      | cerh2802@gmail.com             | 781783cerhC      |
@@ -42,7 +50,7 @@ Característica: Funcionalidad de login
     Y ingreso el correo electrónico incorrecto "<email>"
     * ingreso la contraseña "<pass>" incorrecta
     * hago clic en el botón de inicio de sesión
-    Entonces El mensaje de alerta
+   # Entonces El mensaje de alerta
 
 
     Ejemplos:
@@ -61,6 +69,26 @@ Característica: Funcionalidad de login
     Ejemplos:
       | email                            | pass             |
       | mpocomuchagmailcom02@yopmail.com | *9gGcn7103TmW0   |
+
+  @cambiarmail
+  Esquema del escenario: ingresar nuevo email
+    Dado que he ingresado al navegador
+    Cuando hago clic en el enlace de inicio de sesión
+    Y ingreso el correo electrónico incorrecto "<email>"
+    * ingreso la contraseña "<pass>"
+    * hago clic en el botón de inicio de sesión
+    * Realizar click en menu
+    * Realizar gestionar perfil
+    * Realizar click modulo cambiar correo
+   # Entonces El mensaje de alerta
+    #si no apruebar el cambio de correo, continua con el primer correo
+
+
+    Ejemplos:
+      | email                        | pass           |
+     # | arzuninogmailcom@yopmail.com | *9gGcn7103TrmHW0 |
+      #| arzuninogmailcom01@yopmail.com | *9gGcn7103TrmHW0 |
+      | arzuninogmailcom02@yopmail.com | *9gGcn7103TrmHW0 |
 
 
 

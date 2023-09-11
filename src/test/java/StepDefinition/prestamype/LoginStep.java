@@ -1,17 +1,12 @@
-package StepDefinition;
+package StepDefinition.prestamype;
 
-import Base.BaseTest;
 import io.cucumber.java.es.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.List;
 import java.util.Properties;
 
 public class LoginStep {
@@ -39,6 +34,7 @@ public class LoginStep {
 
     @Cuando("hago clic en el enlace de inicio de sesión")
     public void hagoclicenelenlacedeiniciodesesión() throws InterruptedException {
+        Thread.sleep(3000);
         System.out.println("Ingresar inicio de sesion");
         WebElement iniciosesion = driver.findElement(By.xpath(properties.getProperty("iniciosesion")));
         iniciosesion.click();
@@ -47,16 +43,18 @@ public class LoginStep {
     }
 
     @Cuando("ingreso el correo electrónico {string}")
-    public void ingreso_el_correo_electrónico(String email) {
+    public void ingreso_el_correo_electrónico(String email) throws InterruptedException {
+        Thread.sleep(3000);
         System.out.println("Usuario ingresa username");
-        WebElement user = driver.findElement(By.cssSelector(".input#emailID"));
+        WebElement user = driver.findElement(By.cssSelector(properties.getProperty("email")));
         user.sendKeys(email);
         System.out.println("El mail es : " + email);
     }
 
     @Cuando("ingreso la contraseña {string}")
-    public void ingreso_la_contraseña(String pass) {
-        WebElement password = driver.findElement(By.cssSelector(".input:nth-child(2)"));
+    public void ingreso_la_contraseña(String pass) throws InterruptedException {
+        Thread.sleep(3000);
+        WebElement password = driver.findElement(By.xpath(properties.getProperty("pass")));
         password.sendKeys(pass);
         System.out.println("El password es : " + pass);
 
@@ -64,12 +62,34 @@ public class LoginStep {
 
     @Cuando("hago clic en el botón de inicio de sesión")
     public void hago_clic_en_el_botón_de_inicio_de_sesión() throws InterruptedException {
-        WebElement btniniciosesion = driver.findElementByXPath("//button[@name='button-login']");
-        btniniciosesion.click();
         Thread.sleep(2000);
+        WebElement btniniciosesion = driver.findElement(By.xpath(properties.getProperty("btniniciosesion")));
+        btniniciosesion.click();
+
 
 
     }
+
+    @Cuando("Realizar click en menu")
+    public void realizar_click_en_menu() throws InterruptedException {
+        Thread.sleep(4000);
+        WebElement menu = driver.findElement(By.xpath("(//div)[10]"));
+        menu.click();
+    }
+    @Cuando("Realizar gestionar perfil")
+    public void realizar_gestionar_perfil() throws InterruptedException {
+        Thread.sleep(4000);
+        WebElement gestionarperfil = driver.findElement(By.xpath("//a[normalize-space()='Gestiona tu perfil']"));
+        gestionarperfil.click();
+    }
+    @Cuando("Realizar click modulo cambiar correo")
+    public void realizar_click_modulo_cambiar_correo() throws InterruptedException {
+        Thread.sleep(3000);
+        WebElement cambiarmail = driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div/div/aside/div[3]/div[2]/ul/li[4]"));
+        cambiarmail.click();
+    }
+
+
 
     @Entonces("se espera que el usuario inicie sesión con éxito")
     public void se_espera_que_el_usuario_inicie_sesión_con_éxito() {

@@ -1,2 +1,4 @@
-package StepDefinition.cs;public class PublicStep {
+package StepDefinition.cs;
+
+public class PublicStep {
 }

@@ -16,7 +16,7 @@ Característica: Funcionalidad realizar puja en subasta
 
     Ejemplos:
       | email                          | pass             |
-      | mpocomuchagmailcom@yopmail.com | *9gGcn7103TrmHW0 |
+      |  erick.sm2023gmailcom@yopmail.com |  $YzZKG#Kmj1E*14i |
 
 
   @Empresario
@@ -33,4 +33,4 @@ Característica: Funcionalidad realizar puja en subasta
     * realizar click en continuar
     Ejemplos:
       | email                                | pass             | ruc         | rz        | phone      | rucli     | rzcli   | phonecli    | name | emailcli               | phonecontact |
-      | cesarmatosingahotmailcom@yopmail.com | *9gGcn7103TrmHW0 | 10837737747 | Elena s.a | 9857756409 | 209838722 | Dos s.a | 90868868686 | Ana  | anamorales@yopmail.com | 98745898743  |
+       |  testprbtest023test@yopmail.com | 781783cerhC |  10837737747 | Elena s.a | 9857756409 | 209838722 | Dos s.a | 90868868686 | Ana  | anamorales@yopmail.com | 98745898743  |

@@ -1,4 +1,4 @@
-package StepDefinition;
+package StepDefinition.prestamype;
 
 import Base.BaseTest;
 

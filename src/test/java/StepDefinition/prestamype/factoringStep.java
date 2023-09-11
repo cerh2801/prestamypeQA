@@ -1,4 +1,4 @@
-package StepDefinition;
+package StepDefinition.prestamype;
 
 import Base.BaseTest;
 import io.cucumber.java.es.*;
@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 

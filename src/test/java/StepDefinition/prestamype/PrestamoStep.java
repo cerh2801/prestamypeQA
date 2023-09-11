@@ -1,4 +1,4 @@
-package StepDefinition;
+package StepDefinition.prestamype;
 
 import Base.BaseTest;
 import io.cucumber.java.es.*;
@@ -8,12 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.List;
 import java.util.Properties;
 
 public class PrestamoStep extends BaseTest {
