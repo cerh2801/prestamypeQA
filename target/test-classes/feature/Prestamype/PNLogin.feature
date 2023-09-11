@@ -87,7 +87,8 @@ Característica: Funcionalidad de login
     Ejemplos:
       | email                        | pass           |
      # | arzuninogmailcom@yopmail.com | *9gGcn7103TrmHW0 |
-      | arzuninogmailcom01@yopmail.com | *9gGcn7103TrmHW0 |
+      #| arzuninogmailcom01@yopmail.com | *9gGcn7103TrmHW0 |
+      | arzuninogmailcom02@yopmail.com | *9gGcn7103TrmHW0 |
 
 
 
