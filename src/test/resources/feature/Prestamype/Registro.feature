@@ -3,7 +3,7 @@
 @registro
 Característica: Funcionalidad de registro
 
-  @registrodnisuccessfull
+  @registrodni
   Esquema del escenario: Registro de dni
     Dado que he ingresado al browser
     Cuando realizar click en registro
@@ -22,7 +22,7 @@ Característica: Funcionalidad de registro
       | 49032634 | 986565908 | testprbtest023test@yopmail.com | 781783cerhC | 781783cerhC |
 
 
-  @registrocesuccessfull
+  @registroce
   Esquema del escenario: Check ce registrado
     Dado que he ingresado al browser
     Cuando realizar click en registro

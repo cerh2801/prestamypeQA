@@ -66,9 +66,63 @@ public class LoginStep {
         WebElement btniniciosesion = driver.findElement(By.xpath(properties.getProperty("btniniciosesion")));
         btniniciosesion.click();
 
-
-
     }
+//    @Cuando("Dirigirte al modulo confirming")
+//    public void dirigirte_al_modulo_confirming() throws InterruptedException {
+//        Thread.sleep(4000);
+//        WebElement confirming = driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div/div/aside/div[3]/div[2]/ul/li[1]"));
+//        confirming.click();
+//
+//    }
+//
+//    @Cuando("seleccionar tipo relacion empresa")
+//    public void seleccionar_tipo_relacion_empresa() throws InterruptedException {
+//        Thread.sleep(3000);
+//        WebElement agregarempresa = driver.findElement(By.xpath("//label[normalize-space()='Agregar empresa']//i"));
+//        agregarempresa.click();
+//
+//    }
+//
+//    @Cuando("select tipo de empresa  {string}")
+//    public void select_tipo_de_empresa(String rucc) throws InterruptedException {
+//        Thread.sleep(4000);
+//        WebElement typebussiness = driver.findElement(By.xpath("//select[@placeholder='Selecciona el tipo']"));
+//        typebussiness.click();
+//        WebElement gerentegeneral = driver.findElement(By.xpath("//option[@value='5fbb2d636bb2106227967fa2']"));
+//        gerentegeneral.click();
+//        WebElement rucempresa = driver.findElement(By.xpath("//input[@data-qa='ruc']"));
+//        rucempresa.sendKeys(rucc);
+//    }
+//
+//    @Cuando("ingresar razon social  {string}")
+//    public void ingresar_razon_social(String rrz) throws InterruptedException {
+//        Thread.sleep(3000);
+//        WebElement razonsocial = driver.findElement(By.xpath("//input[@data-qa='businessName']"));
+//        razonsocial.sendKeys(rrz);
+//
+//    }
+//    @Cuando("ingresar telefono  {string}")
+//    public void ingresar_telefono(String phone) throws InterruptedException {
+//        Thread.sleep(300);
+//        WebElement telefono = driver.findElement(By.xpath("//input[@data-qa='phone']"));
+//        telefono.sendKeys(phone);
+//
+//    }
+//
+//
+//    @Cuando("select tipo de empresa")
+//    public void select_tipo_de_empresa() throws InterruptedException {
+//        Thread.sleep(4000);
+//        WebElement typebussiness = driver.findElement(By.xpath("//select[@placeholder='Selecciona el tipo']"));
+//        typebussiness.click();
+//        WebElement gerentegeneral = driver.findElement(By.xpath("//option[@value='5fbb2d636bb2106227967fa2']"));
+//        gerentegeneral.click();
+//        WebElement rucempresa = driver.findElement(By.xpath("//input[@data-qa='ruc']"));
+//        rucempresa.click();
+//
+//    }
+
+
 
     @Cuando("Realizar click en menu")
     public void realizar_click_en_menu() throws InterruptedException {

@@ -53,6 +53,59 @@ public class AdminTest extends BaseTest {
 
     }
 
+    @Entonces("al modulo facturas")
+    public void al_modulo_facturas() throws InterruptedException {
+      Thread.sleep(4000);
+        WebElement factura = driver.findElement(By.xpath("//label[@data-qa='facturas']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", factura);
+        factura.click();
+    }
+    @Entonces("realizar modulo depositos y retiros")
+    public void realizar_modulo_depositos_y_retiros() throws InterruptedException {
+      Thread.sleep(4000);
+      WebElement depositos = driver.findElement(By.xpath("//a[@href='/factoring/depositos-retiros']"));
+      depositos.click();
+
+    }
+
+    @Entonces("burcar email {string}")
+    public void burcar_email(String mail) throws InterruptedException {
+        Thread.sleep(4000);
+        WebElement buscardeposito = driver.findElement(By.xpath("//input[@placeholder='Buscar']"));
+        buscardeposito.sendKeys(mail);
+        WebElement btnbuscar = driver.findElement(By.xpath("(//button)[1]"));
+        btnbuscar.click();
+
+    }
+
+    @Entonces("procesar transferencia {string} {string}")
+    public void procesar_transferencia(String comision, String codigodeoperacion) throws InterruptedException {
+        Thread.sleep(4000);
+        WebElement edicion = driver.findElement(By.xpath("(//span)[79]"));
+        edicion.click();
+        Thread.sleep(4000);
+        WebElement cuentaescorrecta = driver.findElement(By.xpath("//span[normalize-space()='¿La cuenta es correcta?']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", cuentaescorrecta);
+        Thread.sleep(4000);
+        WebElement comis = driver.findElement(By.xpath("(//input)[19]"));
+        comis.clear();
+        comis.sendKeys(comision);
+        Thread.sleep(4000);
+        WebElement codigo = driver.findElement(By.xpath("//span[normalize-space()='Código de transferencia']"));
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", codigo);
+        Thread.sleep(4000);
+        WebElement codigodeoper= driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[5]/div/div[2]/div[2]/div[13]/div"));
+        codigodeoper.sendKeys(codigodeoperacion);
+
+
+    }
+
+
+
+
     @Entonces("al modulo inversionista")
     public void al_modulo_inversionista() throws InterruptedException {
         Thread.sleep(4000);

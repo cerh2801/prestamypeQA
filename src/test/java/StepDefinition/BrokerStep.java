@@ -1,6 +1,7 @@
-package StepDefinition.prestamype;
+package StepDefinition;
 
-import io.cucumber.java.es.*;
+import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 

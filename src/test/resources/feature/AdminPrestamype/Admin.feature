@@ -87,3 +87,19 @@ Característica: Aprobacion de inversionista
     Ejemplos:
       | usuadmin                      | adminpassword    |
       | infoprestamypecom@yopmail.com | $YzZKG#Kmj1E*14i |
+
+  @ModuloAprobarDeposito
+  Esquema del escenario: yo como admin ingreso al modulo depositos y retiros
+    Dado que he ingresado al browser admin
+    Cuando usuario ingresa a inversionista "<usuadmin>" "<adminpassword>"
+    Entonces realizar click en comenzar
+    Y al modulo facturas
+    * realizar modulo depositos y retiros
+    * burcar email "<mail>"
+    * procesar transferencia "<comision>" "<codigodeoperacion>"
+
+
+    Ejemplos:
+      | usuadmin                      | adminpassword    | mail                           | comision |codigodeoperacion|
+      | infoprestamypecom@yopmail.com | $YzZKG#Kmj1E*14i | mpocomuchagmailcom@yopmail.com | 12       |cvvfrrr          |
+
